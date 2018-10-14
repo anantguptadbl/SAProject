@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App" style="background-color:white">
+<head>
+
+<!-- Meta Data -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Set the Title -->
+<title>Situational Awareness</title>
+
+<!-- External StyleSheet references -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- External JS Links -->
+<script src="https://code.angularjs.org/1.2.16/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.2.16/angular-route.min.js"></script>
+<script src="https://rawgit.com/angular/bower-material/master/angular-material.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.16/angular-messages.min.js"></script>
+<script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+
+
+<!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+<script src="https://openlayers.org/en/v4.6.4/build/ol.js"></script>
+
+<!-- Menu Toggle Script -->
+<script>
+$("#menu-toggle").click(function(e) {
+e.preventDefault();
+$("#wrapper").toggleClass("toggled");
+});
+</script>
+
+<!-- Internal Javascript Resources -->
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+<script src="{{ url_for('static', filename='js/router.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/controllers/queryjs') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/controllers/userProfile.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/controllers/train.js') }}"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://openlayers.org/en/v4.6.4/css/ol.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/app.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/simple-sidebar.css') }}">
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="https://rawgit.com/angular/bower-material/master/angular-material.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+</head>
+
+<!-- Start of the Body -->
+<body style="background-color:white">
+	<!-- Header Portion -->	
+	<header>
+		<div align="center">
+		    <h1>Situational Awareness Project</h1>
+		</div>
+	</header>
+
+	<div id="wrapper" class="toggled">
+
+	<!-- Sidebar -->
+	<div id="sidebar-wrapper">
+	    <ul class="sidebar-nav">
+		<li>
+		    <a href="#/query">Query</a>
+		</li>
+		<li>
+		    <a href="#/train">Train</a>
+		</li>
+		<li>
+		    <a href="#/userprofile">User Profile</a>
+		</li>
+	    </ul>
+	</div>
+
+	<!-- Page Content -->
+	<div id="page-content-wrapper">
+		<div ng-view></div>
+	</div>
+	<!-- </div> -->
+
+</body>
+</html>
