@@ -1,3 +1,28 @@
+# Predicate Type list for nested joins
+<http://dbpedia.org/ontology/industry>
+<http://dbpedia.org/ontology/keyPerson>
+<http://dbpedia.org/ontology/location>
+<http://dbpedia.org/ontology/locationCity>
+<http://dbpedia.org/ontology/locationCountry>
+<http://dbpedia.org/ontology/product>
+<http://dbpedia.org/ontology/service>
+<http://dbpedia.org/ontology/subsidiary>
+<http://dbpedia.org/property/products>
+<http://dbpedia.org/property/products/services>
+<http://dbpedia.org/property/majorInternationalWellKnownProducts>
+<http://dbpedia.org/property/manufacturer>
+<http://dbpedia.org/property/sector>
+<http://dbpedia.org/property/developer>
+<http://dbpedia.org/property/industries>
+<http://dbpedia.org/property/companyType>
+<http://dbpedia.org/property/practiceAreas>
+<http://dbpedia.org/property/president&Ceo>
+<http://dbpedia.org/property/portfolio>
+<http://dbpedia.org/property/keyPerson>
+<http://dbpedia.org/property/currentCeo>
+<http://dbpedia.org/property/brands>
+
+
 # This will contain the predicateTypeList
 <http://xmlns.com/foaf/0.1/name>
 <http://dbpedia.org/ontology/abstract>
