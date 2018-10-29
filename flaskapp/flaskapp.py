@@ -66,8 +66,13 @@ def getModifiedArray(curInput,model):
 def getXYDataBreakOut():
 	print(request.args.get('paddleData'));
 	print(request.args.get('BallData'));
-	
-	
+
+@app.route('/getQueryResults', methods=["GET","POST"])
+def getQueryResults():
+	print(request)
+	searchString=request.args.get('inputQuery')
+	companyList=['ABC','DEF','GHI']
+	return(json.dumps({"companyList":companyList}))
 
 @app.route('/getSummarizedResults', methods=["GET","POST"])
 def getSummarizedResults():

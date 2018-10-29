@@ -2,20 +2,16 @@
 <div ng-controller="queryController">
  
 <div class="container">
-  <div class="well" align="center">
-	<div><button class="btn-primary btn-lg" ng-repeat="cell in board[0]" ng-disabled="isTaken(cell);" ng-click="move(cell);">{{ cell.value }}</button></div>
-	<div><button class="btn-primary btn-lg" ng-repeat="cell in board[1]" ng-disabled="isTaken(cell);" ng-click="move(cell);">{{ cell.value }}</button></div>
-	<div><button class="btn-primary btn-lg" ng-repeat="cell in board[2]" ng-disabled="isTaken(cell);" ng-click="move(cell);">{{ cell.value }}</button></div>
-	<br/>
-	<p>
-	  <span ng-hide="winner || cat">Current Player: {{ currentPlayer }}</span>
-	  <span ng-show="winner">Player {{ currentPlayer }} won!</span>
-	  <span ng-show="cat">Cat</span>
-	</p>
-  </div>
+	<input type="text" ng-model="inputQuery">
 </div>
           
-<button ng-click="reset();" class="btn btn-primary btn-large" style="margin:auto;display:block;">New Game</button>
+<button ng-click="getQueryResults()" class="btn btn-primary btn-large" style="margin:auto;display:block;">Get Results</button>
+
+<table>
+<tr ng-repeat="curCompany in resultCompanies">
+	<td>{{curCompany}}</td>
+</tr>
+</table>
 
 </div>
 </div>
